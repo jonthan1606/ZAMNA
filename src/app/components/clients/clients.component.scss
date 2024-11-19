@@ -1,0 +1,24 @@
+section {
+  padding: 120px 0px;
+  .container {
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+      .title {
+        text-align: center;
+      }
+      .carousel {
+        .content-swiper {
+          .image {
+            min-height: 160px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}

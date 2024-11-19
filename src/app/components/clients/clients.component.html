@@ -1,0 +1,21 @@
+<section class="m-section">
+  <div class="container">
+    <div class="content">
+      <div class="title">
+        <p class="title-section">Principales clientes</p>
+      </div>
+      <div class="carousel">
+        <swiper [config]="swiperConfig" [navigation]="true" [autoplay]="true" [loop]="true"
+          class="swiper-credentials-home" [pagination]="{clickable: true}">
+          <ng-template swiperSlide *ngFor="let info of images">
+            <div class="content-swiper">
+              <div class="image">
+                <img [src]="info" alt="">
+              </div>
+            </div>
+          </ng-template>
+        </swiper>
+      </div>
+    </div>
+  </div>
+</section>

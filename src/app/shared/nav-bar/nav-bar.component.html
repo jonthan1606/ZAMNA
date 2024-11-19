@@ -1,0 +1,87 @@
+<section id="nav">
+  <div class="content" [ngClass]="{ scroll: scrollFlag || isPageService }">
+    <div class="nav-desktop">
+      <div class="logo-mobile">
+        <a href="javascript:void(0)" (click)="goTo('nav', $event)">
+          <img class="white" src="assets/images/logos/logo-2.png" alt />
+          <img class="black" src="assets/images/logos/logo-2.png" alt />
+        </a>
+      </div>
+
+      <div class="routers">
+        <div class="logo-desktop">
+          <a href="javascript:void(0)" (click)="goTo('nav', $event)" class="logo">
+            <img class="white" src="assets/images/logos/logo-2.png" alt />
+            <img class="black" src="assets/images/logos/logo-2.png" alt />
+          </a>
+        </div>
+
+        <div class="links">
+          <div class="link">
+
+            <a routerLinkActive="active" href="javascript:void(0)" (click)="goTo('nav', $event)">Productos
+            </a>
+            <a routerLinkActive="active" href="javascript:void(0)" (click)="goTo('nav', $event)">Soluciones
+            </a>
+            <a routerLinkActive="active" href="javascript:void(0)" (click)="goTo('about', $event)">Compañia
+            </a>
+            <a routerLinkActive="active" href="javascript:void(0)" (click)="goTo('contact', $event)">Contacto
+            </a>
+
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="nav-menu">
+        <div class="menu" (click)="menu = !menu">
+          <mat-icon class="mat-18">menu</mat-icon>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-mobile" [ngClass]="{ 'open-menu': menu }">
+      <div class="top">
+        <div class="logo">
+          <img src="/assets/images/logo-white.png" alt="" />
+        </div>
+        <div class="close" (click)="menu = !menu">
+          <mat-icon class="mat-18">close</mat-icon>
+        </div>
+      </div>
+
+      <div class="bottom">
+        <div class="routes">
+          <div class="links">
+            <a routerLinkActive="active" href="javascript:void(0)" (click)="goTo('nav', $event); menu = !menu">Productos
+            </a>
+            <a routerLinkActive="active" href="javascript:void(0)" (click)="goTo('nav', $event); menu = !menu">Soluciones
+            </a>
+            <a routerLinkActive="active" href="javascript:void(0)" (click)="goTo('about', $event); menu = !menu">Compañia
+            </a>
+            <a routerLinkActive="active" href="javascript:void(0)" (click)="goTo('contact', $event); menu = !menu">Contacto
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="last">
+          <!-- <div class="border"></div> -->
+          <div class="redes">
+            <a href="" target="_blank">
+              <i class="pi pi-facebook"></i>
+            </a>
+            <a href="" target="_blank">
+              <i class="pi pi-instagram"></i>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

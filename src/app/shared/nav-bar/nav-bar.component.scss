@@ -1,0 +1,477 @@
+section {
+  background-color: var(--white);
+  position: fixed;
+  z-index: 55;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+  .content {
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+
+    &.scroll {
+      box-shadow: 0px 20px 26px 0px rgba(0, 0, 0, 0.16);
+      background-color: var(--white);
+      .nav-desktop {
+        .logo-mobile {
+          a {
+            .white {
+              display: none;
+              max-height: 60px;
+            }
+            .black {
+              display: block;
+              max-height: 60px;
+            }
+          }
+        }
+        .routers {
+          a {
+            color: var(--secondary) !important;
+          }
+          .logo-desktop {
+            a {
+              .white {
+                display: none;
+              }
+              .black {
+                display: block;
+              }
+            }
+          }
+          .contact {
+            .pharma {
+              button {
+                white-space: wrap !important;
+                transition: all 0.2s ease-in-out;
+                background-color: var(--primary);
+              }
+            }
+            .cotizar {
+              button {
+                transition: all 0.2s ease-in-out;
+                background-color: #e20f53;
+              }
+            }
+            .change {
+              button {
+                color: var(--secondary);
+                border: 1px solid var(--secondary);
+                p {
+                  color: var(--secondary);
+                  border-right: 1px solid var(--secondary);
+                }
+              }
+            }
+          }
+        }
+        .nav-menu {
+          mat-icon {
+            color: var(--secondary);
+          }
+        }
+      }
+    }
+
+    .nav-desktop {
+      max-width: 1323px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      @media (max-width: 1199px) {
+        padding: 15px 20px;
+      }
+
+      .logo-mobile {
+        display: flex;
+        align-items: center;
+        padding: 10px 0px;
+        height: 40px;
+        transition: all 0.2s ease-in-out;
+        @media (min-width: 1200px) {
+          display: none;
+        }
+        a {
+          .white {
+            display: block;
+            max-height: 60px;
+          }
+          .black {
+            display: none;
+            max-height: 60px;
+          }
+        }
+      }
+
+      .routers {
+        display: none;
+        @media (min-width: 1200px) {
+          transition: height 0.2s ease-in-out;
+          height: 76px;
+          padding: 20px;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 50px;
+          width: 100%;
+
+          .logo-desktop {
+            a {
+              img {
+                max-height: 60px;
+              }
+              .white {
+                display: block;
+
+              }
+              .black {
+                display: none;
+              }
+            }
+          }
+
+          .links {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .link {
+              display: flex;
+              flex-direction: row;
+              gap: 50px;
+              align-items: center;
+              justify-content: center;
+
+              a {
+                font-family: "RedHatDisplay";
+                color: var(--secondary);
+                transition: all 0.2s ease-in-out;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 1;
+                white-space: nowrap;
+                cursor: pointer;
+                // &.active,
+                // &:hover {
+                //   color: white;
+                //   font-weight: 500;
+                // }
+              }
+            }
+          }
+
+          .contact {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 30px;
+            .phone {
+              display: none;
+              @media (min-width: 1110px) {
+                display: block;
+              }
+              a {
+                font-family: "RedHatDisplay";
+                font-size: 14px;
+                color: var(--secondary);
+                letter-spacing: 3%;
+              }
+            }
+            .pharma {
+              button {
+                white-space: wrap !important;
+                max-width: 126px;
+                text-align: center;
+                border-radius: 31px;
+                color: var(--secondary);
+                font-size: 11px;
+                padding: 10px 5px;
+                height: 38px;
+                background-color: #e20f53;
+                line-height: 1;
+              }
+            }
+            .cotizar {
+              button {
+                border-radius: 31px;
+                color: var(--secondary);
+                font-size: 14px;
+                padding: 10px 23px;
+                height: auto;
+              }
+            }
+            .change {
+              .dropdown {
+                display: inline-block;
+                position: relative;
+                width: fit-content;
+
+                .dropdown-content {
+                  border: 1px solid var(--secondary);
+                  // border: 1px solid red;
+                  display: none;
+                  position: absolute;
+                  background-color: var(--primary);
+                  width: 100%;
+                  z-index: 5;
+                }
+
+                .dropdown-content a {
+                  padding: 12px 10px;
+                  color: var(--secondary);
+                  text-decoration: none;
+                  display: block;
+                  font-size: inherit;
+
+                  &:first-child {
+                    p {
+                      padding-top: 0.2em;
+                    }
+                  }
+                }
+              }
+
+              .dropdown:hover .dropdown-content {
+                display: block;
+                border-radius: 0px;
+              }
+
+              .dropdown:hover .dropbtn {
+                background-color: transparent;
+                border-radius: 10px;
+              }
+
+              button {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                background-color: transparent;
+                gap: 5px;
+                color: var(--secondary);
+                border: 1px solid var(--secondary);
+                padding-top: 0px;
+                padding-bottom: 0px;
+                p {
+                  padding: 5px 5px 5px 0px;
+                  border-right: 1px solid var(--secondary);
+                  color: var(--secondary);
+                  width: 100%;
+                  height: 100%;
+                  text-transform: uppercase;
+                }
+                mat-icon {
+                  width: 18px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                }
+                img {
+                  min-width: 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .nav-menu {
+        display: block;
+        width: 35px;
+        mat-icon {
+          color: var(--primary);
+          font-size: 30px;
+        }
+        img {
+          width: 100%;
+        }
+        @media (min-width: 1200px) {
+          display: none;
+        }
+      }
+    }
+
+    .nav-mobile {
+      position: fixed;
+      z-index: 99;
+      top: 0px;
+      width: 100%;
+      // height: 100%;
+      height: 100vh;
+      transition: all 0.3s ease-in-out;
+      right: -100%;
+      // background-color: #ebebeb;
+      background-color: var(--secondary);
+      padding: 30px;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+      transition: all 0.3s ease-in-out;
+      z-index: 99 !important;
+      @media (max-width: 400px) {
+        // gap: 30px;
+      }
+      &.open-menu {
+        right: 0;
+      }
+
+      .top {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+        justify-content: space-between;
+        .close {
+          mat-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #d9d9d9;
+            font-size: 40px;
+          }
+        }
+      }
+      .bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        .routes {
+          display: flex;
+          flex-direction: column;
+          gap: 50px;
+          .links {
+            display: flex;
+            flex-direction: column;
+            gap: 36px;
+            a {
+              width: fit-content;
+              color: var(--white);
+              font-size: 23px;
+              font-family: "RedHatDisplay";
+              font-weight: 500;
+            }
+          }
+          .contact {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            .button {
+              display: flex;
+              flex-direction: column;
+              gap: 16px;
+              .pharma {
+                height: fit-content;
+                white-space: wrap !important;
+                font-size: 11px;
+              }
+              button {
+                width: 139px;
+                max-width: 100%;
+                border-radius: 37px;
+                padding: 8px 20px;
+                color: var(--secondary);
+                font-size: 16px;
+                font-weight: 500;
+              }
+            }
+            .change {
+              .dropdown {
+                display: inline-block;
+                position: relative;
+                width: fit-content;
+
+                .dropdown-content {
+                  border: 1px solid var(--secondary);
+                  // border: 1px solid red;
+                  display: none;
+                  position: absolute;
+                  background-color: var(--background);
+                  width: 100%;
+                  z-index: 5;
+                }
+
+                .dropdown-content a {
+                  padding: 12px 10px;
+                  color: var(--secondary);
+                  text-decoration: none;
+                  display: block;
+                  font-size: 8px;
+
+                  &:first-child {
+                    p {
+                      padding-top: 0.2em;
+                    }
+                  }
+                }
+              }
+
+              .dropdown:hover .dropdown-content {
+                display: block;
+                border-radius: 0px;
+              }
+
+              .dropdown:hover .dropbtn {
+                background-color: transparent;
+                border-radius: 10px;
+              }
+              button {
+                background-color: transparent;
+                text-transform: uppercase;
+                width: 67px;
+                max-width: 100%;
+                height: 22px;
+                border: 1px solid white;
+                color: var(--secondary);
+                font-size: 8px;
+                font-family: "RedHatDisplay";
+              }
+            }
+          }
+        }
+        .information {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          a {
+            width: fit-content;
+            color: white;
+            font-size: 14px;
+            font-family: "RedHatDisplay";
+            font-weight: 500;
+          }
+        }
+        .last {
+          display: flex;
+          flex-direction: column;
+          gap: 26px;
+          .border {
+            height: 3px;
+            width: 121%;
+            overflow: hidden;
+            margin: 0 auto;
+            background-color: red;
+            transform: translateX(-30px);
+            background: linear-gradient(135deg, #23b6ca, #e20f53);
+          }
+          .redes {
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            align-items: center;
+            a {
+              width: fit-content;
+            }
+            i{
+              font-size: 20px;
+              color: var(--white);
+            }
+          }
+        }
+      }
+    }
+  }
+}

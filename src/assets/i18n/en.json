@@ -1,0 +1,50 @@
+{
+  "NAVBAR": {
+    "HOME": "Home",
+    "TRANSFER": "Transfer",
+    "ABOUT": "About",
+    "CONTACT": "Contact"
+    },
+ "BANNER": {
+    "TITLE": "Reliable private transportation from the airport",
+    "SUBTITLE": "Arrive in Tulum and Cancun without worries",
+    "TEXT": "Book now and start your adventure!",
+    "BUTTON": "Book now",
+    "BUTTON1": "Contact"
+  },
+  "TESTIMONIALS": {
+    "TITLE": "RECOMMENDATIONS",
+    "TEXT": "Our recommendations speak for themselves"
+  },
+  "ABOUT": {
+    "TITLE": "About us",
+    "TEXT": "Tulum Maya Transfer is a company specialized in tourist transportation, offering safe and reliable transfer services from the airport to hotels and different destinations. Their focus is to provide a comfortable and punctual experience, ensuring the peace of mind of their clients during their trips.",
+    "BUTTON": "Book now"
+  },
+  "CONTACT": {
+    "TITLE": "Contact Information",
+    "ADDRESS": "Address",
+    "PHONE": "Phone",
+    "PLACEHOLDER-PHONE": "Enter your phone",
+    "SCHEDULES1": "Schedules",
+    "SCHEDULES": "Always Open",
+    "TEXT": "Contact Us",
+    "NAME": "Name",
+    "PLACEHOLDER-NAME": "Enter your name",
+    "EMAIL": "Email",
+    "PLACEHOLDER-EMAIL": "Enter your email",
+    "MESSAGE": "Message",
+    "PLACEHOLDER-MESSAGE": "Enter your message",
+    "BUTTON": "Send"
+},
+"FOOTER": {
+  "INFO": "INFORMATION",
+  "SOCIAL": "SOCIAL MEDIA",
+  "CONTACT": "CONTACT",
+  "RRIVACY": "TERMS OF SERVICE",
+  "POLICY": "PRIVACY POLICY"
+}
+
+
+
+}

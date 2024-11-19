@@ -1,0 +1,76 @@
+<section class="m-section">
+  <div class="container">
+    <div class="content">
+      <div class="top">
+        <div class="title-top">
+          <div class="subtitle">
+            <p class="subtitle">Comienza tu viaje con Zamna13</p>
+          </div>
+          <div class="title">
+            <p class="title-section">Contáctanos</p>
+            <p class="text">Atención al cliente</p>
+          </div>
+        </div>
+        <div class="contact-info">
+          <!-- <div class="row phone">
+            <p class="title">{{"HOME.CONTACT.PHONE" | translate}}</p>
+            <a href="tel:+529988810400" class="text">+52 998 881 0400</a>
+          </div> -->
+          <!-- <div class="border"></div> -->
+          <div class="row email">
+            <p class="title">CORREO ELECTRÓNICO</p>
+            <a href="mailto: ventas@zamna13.com" class="text">ventas&#64;zamna.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="form">
+        <form [formGroup]="contactForm" (ngSubmit)="formValidation()">
+          <div class="inputs">
+            <div class="form-field"
+              [ngClass]="{'margin-error' : (contactForm.get('name')?.errors && contactForm.get('name')?.touched) || (invalid && contactForm.get('name')?.untouched)}">
+              <input type="text" placeholder="Nombre" required
+                (click)="resetValidations()" formControlName="name" />
+              <p class="form-error" [@enterAnimation]
+                *ngIf="(contactForm.get('name')?.errors && contactForm.get('name')?.touched) || (invalid && contactForm.get('name')?.untouched)">
+                {{errorMessage('name')}}
+              </p>
+            </div>
+            <div class="form-field"
+              [ngClass]="{'margin-error' : (contactForm.get('phone')?.errors && contactForm.get('phone')?.touched) || (invalid && contactForm.get('phone')?.untouched)}">
+              <div>
+                <input type="text" placeholder="Teléfono" required
+                  (click)="resetValidations()" formControlName="phone" minlength="10" maxlength="15"
+                  oninput="(value=value.replace(/\D+/g, ''))" />
+              </div>
+              <p class="form-error" [@enterAnimation]
+                *ngIf="(contactForm.get('phone')?.errors && contactForm.get('phone')?.touched) || (invalid && contactForm.get('phone')?.untouched)">
+                {{errorMessage('phone')}}
+              </p>
+            </div>
+            <div class="form-field"
+              [ngClass]="{'margin-error' : (contactForm.get('email')?.errors && contactForm.get('email')?.touched) || (invalid && contactForm.get('email')?.untouched)}">
+              <input type="text" placeholder="Email" required
+                (click)="resetValidations()" formControlName="email" />
+              <p class="form-error" [@enterAnimation]
+                *ngIf="(contactForm.get('email')?.hasError('required') && contactForm.get('email')?.touched) || (invalid && contactForm.get('email')?.untouched)">
+                *Requerido
+              </p>
+              <p class="form-error" [@enterAnimation]
+                *ngIf="contactForm.get('email')?.hasError('pattern') && contactForm.get('email')?.touched">
+                {{errorMessage('email')}}
+              </p>
+            </div>
+            <div class="form-field">
+              <textarea placeholder="Mensaje" formControlName="message"></textarea>
+            </div>
+          </div>
+          <div class="button captcha">
+            <button class="btn-primary" [ngClass]="{'loading': isLoading}"
+              [disabled]="isLoading">Enviar</button>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
